@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/04 19:44:41 by nevaspid         ###   ########.fr       */
+/*   Created: 2023/01/04 19:44:43 by nevaspid          #+#    #+#             */
+/*   Updated: 2023/01/04 20:04:15 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-int ft_printf(const char *str)
+int main()
 {
 	int len;
-
-	len = 0;
-
-	while (str[len])
-	{
-		write(1, &str[len], 1);
-		len++;
-	}
-	return (len);
+	char *a = "je suis";
+	len = ft_printf(a);
+	printf("%d", len);
+	printf("\n %d", printf(a));
 }
