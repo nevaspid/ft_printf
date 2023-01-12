@@ -6,14 +6,14 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/06 17:50:09 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/01/12 20:11:08 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // man 3 stdarg
 #include "ft_printf.h"
 
-int ft_printf(const char *str)
+int ft_printf(const char *str, ...)
 {
 	int len;
 

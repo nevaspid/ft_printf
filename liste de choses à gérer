@@ -1,0 +1,57 @@
+Liste des chose a faire pour ft_printf :
+
+• %c Affiche un seul caractère.
+
+• %s Affiche une chaîne de caractères (telle que définie par la convention C).
+
+• %p L’argument de pointeur void * doit être affiché en hexadécimal.
+
+• %d Affiche un nombre décimal (base 10).
+
+• %i Affiche un entier en base 10.
+
+• %u Affiche un nombre décimal non signé (base 10).
+
+• %x Affiche un nombre en hexadécimal (base 16) avec des lettres minuscules.
+
+• %X Affiche un nombre en hexadécimal (base 16) avec des lettres majuscules.
+
+• %% Affiche un signe pourcentage.
+
+Avancement :
+
+• %c = False
+
+• %s = False
+
+• %p = False
+
+• %d = False
+
+• %i = False
+
+• %u = False
+
+• %x = False
+
+• %X = False
+
+• %% = False
+
+List va_arg() :
+
+• c = va_arg(args, int)
+
+• s = va_arg(args, char *)
+
+• p = va_arg(args, unsigned long)
+
+• d = va_arg(args, int)
+
+• i = va_arg(args, int)
+
+• u = va_arg(args, unsigned int)
+
+• x = va_arg(args, unsigned int)
+
+• X = va_arg(args, unsigned int)
