@@ -1,10 +1,22 @@
-Liste des chose a faire pour ft_printf :
+;; ************************************************************************** ;;
+;;                                                                            ;;
+;;                                                        :::      ::::::::   ;;
+;;   liste de choses à gérer                            :+:      :+:    :+:   ;;
+;;                                                    +:+ +:+         +:+     ;;
+;;   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        ;;
+;;                                                +#+#+#+#+#+   +#+           ;;
+;;   Created: 2023/01/12 20:14:14 by nevaspid          #+#    #+#             ;;
+;;   Updated: 2023/01/12 20:16:33 by nevaspid         ###   ########.fr       ;;
+;;                                                                            ;;
+;; ************************************************************************** ;;
+
+Liste des choses à faire pour ft_printf :
 
 • %c Affiche un seul caractère.
 
 • %s Affiche une chaîne de caractères (telle que définie par la convention C).
 
-• %p L’argument de pointeur void * doit être affiché en hexadécimal.
+• %p argument de pointeur void * doit être affiché en hexadécimal.
 
 • %d Affiche un nombre décimal (base 10).
 
