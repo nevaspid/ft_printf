@@ -6,14 +6,14 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/16 19:39:47 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:46:07 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // man 3 stdarg
 #include "ft_printf.h"
 
-int	conditions(va_list args, const char *str, int i)
+int	conditions_select(va_list args, const char *str, int i)
 {
 
 }

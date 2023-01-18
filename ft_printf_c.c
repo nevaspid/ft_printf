@@ -6,11 +6,18 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:25:06 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/16 18:56:36 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:59:31 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd)
+#include "ft_printf.h"
+
+void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	int count;
+
+	count = write(1, &c, 1);
+	if (count == -1)
+		return	(-2147483648);
+	return (ret);
 }
