@@ -6,28 +6,30 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/18 15:46:07 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/01/31 21:54:56 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // man 3 stdarg
 #include "ft_printf.h"
 
-int	conditions_select(va_list args, const char *str, int i)
+int	select_format(va_list args, const char *str, int i)
 {
 
 }
 
 int ft_printf(const char *str, ...)
 {
-	int len;
+	int i;
+	
+	va_list args;
 
-	len = 0;
+	i = 0;
 
-	while (str[len])
-	{
-		write(1, &str[len], 1);
-		len++;
-	}
-	return (len);
+	if (!str)
+		return (null);
+	while (str[i])
+		if (i == '%')
+			args = select_format(args, *str, i);
+		i++;
 }
