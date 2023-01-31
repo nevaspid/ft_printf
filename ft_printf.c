@@ -6,7 +6,7 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/31 21:54:56 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/01/31 22:03:31 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ int ft_printf(const char *str, ...)
 	if (!str)
 		return (null);
 	while (str[i])
+	{
 		if (i == '%')
-			args = select_format(args, *str, i);
+			i = select_format(args, *str, i);
 		i++;
+	}
+	return (i);
 }
