@@ -6,7 +6,7 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:44:43 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/01/12 21:05:25 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/02/04 17:54:35 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int main()
 {
-	int len;
-	char *a = "je suis";
-	len = ft_printf(a);
-	printf("%d", len);
-	printf("\n %d", printf(a));
+	ft_printf("%X");
 }
