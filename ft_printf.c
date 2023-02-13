@@ -6,7 +6,7 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/04 17:47:53 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:48:52 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ static int	select_format(va_list args, const char *str, int i)
 	len = 0;
 	if (str[i] == '%')
 		return (0);
-	if (str[i] == 'c')
-		write(1, "c", 1);
-	if (str[i] == 's')
+	else if (str[i] == 'c')
+		len += ft_putchar_pf(args, len);
+	else if (str[i] == 's')
 		write(1, "s", 1);
-	if (str[i] == 'u')
+	else if (str[i] == 'u')
 		write(1, "u", 1);
-	if (str[i] == 'x')
+	else if (str[i] == 'x')
 		write(1, "x", 1);
-	if (str[i] == 'X')
+	else if (str[i] == 'X')
 		write(1, "X", 1);
-	if (str[i] == 'p')
+	else if (str[i] == 'p')
 		write(1, "p", 1);
-	if (str[i] == 'd' || str[i] == 'i')
+	else if (str[i] == 'd' || str[i] == 'i')
 		write(1, "di", 2);
 	else
 		i++;
