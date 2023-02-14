@@ -6,7 +6,7 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/13 17:48:52 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:49:51 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static int	select_format(va_list args, const char *str, int i)
 
 	len = 0;
 	if (str[i] == '%')
-		return (0);
+		len += ft_putchar_pf('%');	
 	else if (str[i] == 'c')
-		len += ft_putchar_pf(args, len);
+		len += ft_putchar_pf(va_arg(args, int));
 	else if (str[i] == 's')
 		write(1, "s", 1);
 	else if (str[i] == 'u')
@@ -34,8 +34,6 @@ static int	select_format(va_list args, const char *str, int i)
 		write(1, "p", 1);
 	else if (str[i] == 'd' || str[i] == 'i')
 		write(1, "di", 2);
-	else
-		i++;
 	return (len);
 }
 
@@ -56,8 +54,11 @@ int ft_printf(const char *str, ...)
 		return (0);
 	while (str[i])
 	{
-		if (str[i++] == '%')
-			count += select_format(args, str, i);
+		if (str[i] == '%')
+			count += select_format(args, str, ++i);
+		else
+			count += ft_putchar_pf(str[i]);
+		i++;
 	}
 	va_end(args);
 	return (count);
