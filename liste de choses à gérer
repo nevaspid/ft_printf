@@ -3,10 +3,10 @@
 ;;                                                        :::      ::::::::   ;;
 ;;   liste de choses à gérer                            :+:      :+:    :+:   ;;
 ;;                                                    +:+ +:+         +:+     ;;
-;;   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        ;;
+;;   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2023/01/12 20:14:14 by nevaspid          #+#    #+#             ;;
-;;   Updated: 2023/01/16 17:54:48 by nevaspid         ###   ########.fr       ;;
+;;   Updated: 2023/02/14 18:13:14 by gloms            ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -36,9 +36,9 @@ Liste des choses à faire pour ft_printf :
 
 Avancement :
 
-• %c = False
+• %c = True
 
-• %s = False
+• %s = True
 
 • %p = False
 
