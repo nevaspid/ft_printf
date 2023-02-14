@@ -6,7 +6,7 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:44:43 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/04 17:54:35 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:45:48 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int main()
 {
-	ft_printf("%X");
+	ft_printf("bonjour %c bonsoir", 48);
 }

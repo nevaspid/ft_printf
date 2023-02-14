@@ -6,13 +6,13 @@
 /*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:25:06 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/13 17:49:21 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:42:21 by nevaspid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar_pf(int c)
+int	ft_putchar_pf(int c)
 {
 	int count;
 
