@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nevaspid <romain.brendle.guido@gmail.co    +#+  +:+       +#+        */
+/*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/14 14:49:51 by nevaspid         ###   ########.fr       */
+/*   Updated: 2023/02/17 18:27:24 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	select_format(va_list args, const char *str, int i)
 	else if (str[i] == 'p')
 		write(1, "p", 1);
 	else if (str[i] == 'd' || str[i] == 'i')
-		write(1, "di", 2);
+		len += ft_printf_di(va_arg(args, int));
 	return (len);
 }
 
