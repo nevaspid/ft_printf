@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/17 18:27:24 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/20 15:01:02 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int ft_printf(const char *str, ...)
 	va_list args;
 	
 	i = 0;
-	error = 0;
 	count = 0;
 
 	va_start(args, str);
@@ -61,5 +60,7 @@ int ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(args);
+	if (count < 0)
+		return (-1);
 	return (count);
 }
