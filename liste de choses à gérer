@@ -6,7 +6,7 @@
 ;;   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2023/01/12 20:14:14 by nevaspid          #+#    #+#             ;;
-;;   Updated: 2023/02/14 18:13:14 by gloms            ###   ########.fr       ;;
+;;   Updated: 2023/02/24 17:50:14 by gloms            ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -42,15 +42,15 @@ Avancement :
 
 • %p = False
 
-• %d = False
+• %d = True
 
-• %i = False
+• %i = True
 
-• %u = False
+• %u = True
 
-• %x = False
+• %x = True
 
-• %X = False
+• %X = True
 
 • %% = False
 

@@ -1,64 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_di.c                                     :+:      :+:    :+:   */
+/*   ft_printf_xmin.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 18:00:26 by gloms             #+#    #+#             */
-/*   Updated: 2023/02/20 15:49:34 by gloms            ###   ########.fr       */
+/*   Created: 2023/02/20 17:18:29 by gloms             #+#    #+#             */
+/*   Updated: 2023/02/24 17:33:26 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int len_nbr(long long nbr)
+static int len_nbr(unsigned int nbr)
 {
 	int	count;
 
 	count = 0;
-	if (nb <= 0)
-	{
+	if (!nbr)
 		count += 1;
-		if (nb < 0)
-			nb *= -1;
-	}
-	while (nb / 10)
+	while (nbr)
 	{
-		nb /= 10;
+		nbr /= 16;
 		count++;
 	}
-	if (nb >= 1 && nb <= 9)
-		count += 1;
 	return (count);
 }
 
-int ft_printf_di(long long nbr)
+static int called_ft_printf_xmin(unsigned int nbr)
 {
-	if (nbr < 0)
+	if (nbr < 10)
 	{
-		if (ft_putchar_pf('_') < 0)
-			return (-2147483648);
-		nbr *= -1;
-	}
-	if (nbr >= 10)
-	{
-		if (ft_putnbr_pf(nb / 10) < 0)
-			return (-2147483648);
-		if (ft_putnbr_pf(nb % 10) < 0)
+		if (ft_putchar_pf(nbr + 48) < 0)
 			return (-2147483648);
 	}
-	if (nb >= 0 && nb <= 9)
+	if (nbr >= 16)
 	{
-		if (ft_putchar_pf(nb + 48) < 0)
+		if (ft_printf_xmin(nbr / 16) < 0)
+			return (-2147483648);
+		if (ft_printf_xmin(nbr % 16) < 0)
+			return (-2147483648);
+	}
+	if (nbr >= 10 && nbr <= 15)
+	{
+		if (ft_putchar_pf(nbr + 87) < 0)
 			return (-2147483648);
 	}
 	return (1);
 }
 
-int call_pf_di(long long nbr)
+int ft_printf_xmin(unsigned int nbr)
 {
-	if (ft_printf_di(nbr) < 0)
+	if (called_ft_printf_xmin(nbr) < 0)
 		return (-2147483648);
-	return (count(nbr));
+	return (len_nbr(nbr));
 }
