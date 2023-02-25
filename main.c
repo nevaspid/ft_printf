@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:44:43 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/25 20:35:35 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/25 21:03:37 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int main()
 {
-	// printf("\n %d ", ft_printf("bonjour %bonsoir"));
-	printf("\n %d", ft_printf("hel%bo"));
+	printf("\n %d", ft_printf("\001\002\007\v\010\f\r\n"));
+	printf("\n %d", printf("\001\002\007\v\010\f\r\n"));
 }

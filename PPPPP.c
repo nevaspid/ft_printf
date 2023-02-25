@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_xmin.c                                   :+:      :+:    :+:   */
+/*   PPPPP.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 17:18:29 by gloms             #+#    #+#             */
-/*   Updated: 2023/02/25 20:46:26 by gloms            ###   ########.fr       */
+/*   Created: 2023/02/25 20:45:10 by gloms             #+#    #+#             */
+/*   Updated: 2023/02/25 20:46:01 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int len_nbr(unsigned int nbr)
+static int len_nbr(unsigned long int nbr)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ static int len_nbr(unsigned int nbr)
 	return (count);
 }
 
-static int called_ft_printf_xmin(unsigned int nbr)
+static int called_ft_printf_xmin(unsigned long int nbr)
 {
 	if (nbr < 10)
 	{
@@ -36,9 +36,9 @@ static int called_ft_printf_xmin(unsigned int nbr)
 	}
 	if (nbr >= 16)
 	{
-		if (ft_printf_xmin(nbr / 16) < 0)
+		if (ft_printf_P(nbr / 16) < 0)
 			return (-2147483648);
-		if (ft_printf_xmin(nbr % 16) < 0)
+		if (ft_printf_P(nbr % 16) < 0)
 			return (-2147483648);
 	}
 	if (nbr >= 10 && nbr <= 15)
@@ -49,7 +49,7 @@ static int called_ft_printf_xmin(unsigned int nbr)
 	return (1);
 }
 
-int ft_printf_xmin(unsigned int nbr)
+int ft_printf_P(unsigned long int nbr)
 {
 	if (called_ft_printf_xmin(nbr) < 0)
 		return (-2147483648);
