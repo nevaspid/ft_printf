@@ -6,7 +6,7 @@
 #    By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/24 17:42:58 by gloms             #+#    #+#              #
-#    Updated: 2023/02/24 17:45:20 by gloms            ###   ########.fr        #
+#    Updated: 2023/02/25 20:28:44 by gloms            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ SRCS		+= ft_printf_X.c
 SRCS		+= ft_printf_xmin.c
 SRCS		+= ft_printf_diu.c
 
-
 #	=== FLAGS ===
 CFLAGS		+= -Wall
 CFLAGS		+= -Wextra
@@ -26,7 +25,7 @@ CFLAGS		+= -g
 CFLAGS		+= -c
 
 #	=== KEYS WORDS ===
-NAME		= ft_printf.a
+NAME		= libftprintf.a
 
 OBJS		= $(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/24 17:48:54 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/25 20:30:22 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,22 @@ static int	select_format(va_list args, const char *str, int i)
 	else if (str[i] == 'c')
 		len += ft_putchar_pf(va_arg(args, int));
 	else if (str[i] == 's')
-		write(1, "s", 1);
+		len += ft_printf_str(va_arg(args, char *));
 	else if (str[i] == 'u')
 		len += ft_printf_diu((long long)va_arg(args, unsigned int));
 	else if (str[i] == 'x')
-		len += ft_printf_xmin(va_arg(args, unsigned int));
+		len += ft_printf_xmin(va_arg(args, unsigned long int));
 	else if (str[i] == 'X')
 		len += ft_printf_X(va_arg(args, unsigned int));
 	else if (str[i] == 'p')
-		write(1, "p", 1);
+	{
+		len += ft_printf_str("0x");
+		len += ft_printf_xmin(va_arg(args, unsigned long int));
+	}
 	else if (str[i] == 'd' || str[i] == 'i')
 		len += ft_printf_diu(va_arg(args, int));
+	else
+		len += write(1, &(str[i]), 1);
 	return (len);
 }
 
@@ -51,7 +56,7 @@ int ft_printf(const char *str, ...)
 		return (0);
 	while (str[i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && str[i + 1])
 			count += select_format(args, str, ++i);
 		else
 			count += ft_putchar_pf(str[i]);

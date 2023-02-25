@@ -6,13 +6,13 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:18:29 by gloms             #+#    #+#             */
-/*   Updated: 2023/02/24 17:33:26 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/25 19:42:45 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int len_nbr(unsigned int nbr)
+static int len_nbr(unsigned long int nbr)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ static int len_nbr(unsigned int nbr)
 	return (count);
 }
 
-static int called_ft_printf_xmin(unsigned int nbr)
+static int called_ft_printf_xmin(unsigned long int nbr)
 {
 	if (nbr < 10)
 	{
@@ -49,7 +49,7 @@ static int called_ft_printf_xmin(unsigned int nbr)
 	return (1);
 }
 
-int ft_printf_xmin(unsigned int nbr)
+int ft_printf_xmin(unsigned long int nbr)
 {
 	if (called_ft_printf_xmin(nbr) < 0)
 		return (-2147483648);

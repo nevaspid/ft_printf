@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:00:26 by gloms             #+#    #+#             */
-/*   Updated: 2023/02/24 17:40:53 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/24 18:31:28 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int called_ft_printf_di(long long nbr)
 {
 	if (nbr < 0)
 	{
-		if (ft_putchar_pf('_') < 0)
+		if (ft_putchar_pf('-') < 0)
 			return (-2147483648);
 		nbr *= -1;
 	}

@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:26:27 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/24 17:39:11 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/25 19:43:10 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_putchar_pf(int c);
 int ft_printf_diu(long long nbr);
 int	ft_printf_str(char *str);
 int ft_printf_X(unsigned int nbr);
-int ft_printf_xmin(unsigned int nbr);
+int ft_printf_xmin(unsigned long int nbr);
 
 #endif

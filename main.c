@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:44:43 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/24 17:52:02 by gloms            ###   ########.fr       */
+/*   Updated: 2023/02/25 20:35:35 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 int main()
 {
-	ft_printf("bonjour %u bonsoir", 11);
+	// printf("\n %d ", ft_printf("bonjour %bonsoir"));
+	printf("\n %d", ft_printf("hel%bo"));
 }
