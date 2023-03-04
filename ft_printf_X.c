@@ -6,13 +6,13 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:18:29 by gloms             #+#    #+#             */
-/*   Updated: 2023/02/24 17:10:55 by gloms            ###   ########.fr       */
+/*   Updated: 2023/03/04 02:33:02 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int len_nbr(unsigned int nbr)
+static int	len_nbr(unsigned int nbr)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ static int len_nbr(unsigned int nbr)
 	return (count);
 }
 
-static int called_ft_printf_X(unsigned int nbr)
+static int	called_ft_printf_x(unsigned int nbr)
 {
 	if (nbr < 10)
 	{
@@ -36,9 +36,9 @@ static int called_ft_printf_X(unsigned int nbr)
 	}
 	if (nbr >= 16)
 	{
-		if (ft_printf_X(nbr / 16) < 0)
+		if (ft_printf_x(nbr / 16) < 0)
 			return (-2147483648);
-		if (ft_printf_X(nbr % 16) < 0)
+		if (ft_printf_x(nbr % 16) < 0)
 			return (-2147483648);
 	}
 	if (nbr >= 10 && nbr <= 15)
@@ -49,9 +49,9 @@ static int called_ft_printf_X(unsigned int nbr)
 	return (1);
 }
 
-int ft_printf_X(unsigned int nbr)
+int	ft_printf_x(unsigned int nbr)
 {
-	if (called_ft_printf_X(nbr) < 0)
+	if (called_ft_printf_x(nbr) < 0)
 		return (-2147483648);
 	return (len_nbr(nbr));
 }

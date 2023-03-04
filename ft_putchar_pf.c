@@ -6,15 +6,15 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:25:06 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/25 20:57:17 by gloms            ###   ########.fr       */
+/*   Updated: 2023/03/04 00:23:24 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 int	ft_putchar_pf(int c)
-{	
+{
 	if (write(1, &c, 1) == -1)
-		return	(-2147483648);
+		return (-2147483648);
 	return (1);
 }

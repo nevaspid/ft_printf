@@ -6,14 +6,14 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:44:43 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/02/25 21:03:37 by gloms            ###   ########.fr       */
+/*   Updated: 2023/03/04 02:34:00 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main()
+int	main(void)
 {
-	printf("\n %d", ft_printf("\001\002\007\v\010\f\r\n"));
-	printf("\n %d", printf("\001\002\007\v\010\f\r\n"));
+	int i = 50;
+	ft_printf("%p\n", i);
 }

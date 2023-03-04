@@ -6,13 +6,13 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:00:26 by gloms             #+#    #+#             */
-/*   Updated: 2023/02/24 18:31:28 by gloms            ###   ########.fr       */
+/*   Updated: 2023/03/03 18:57:05 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int len_nbr(long long nbr)
+static int	len_nbr(long long nbr)
 {
 	int	count;
 
@@ -33,7 +33,7 @@ static int len_nbr(long long nbr)
 	return (count);
 }
 
-static int called_ft_printf_di(long long nbr)
+static int	called_ft_printf_di(long long nbr)
 {
 	if (nbr < 0)
 	{
@@ -56,7 +56,7 @@ static int called_ft_printf_di(long long nbr)
 	return (1);
 }
 
-int ft_printf_diu(long long nbr)
+int	ft_printf_diu(long long nbr)
 {
 	if (called_ft_printf_di(nbr) < 0)
 		return (-2147483648);
