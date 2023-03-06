@@ -6,7 +6,7 @@
 /*   By: gloms <rbrendle@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:23:07 by nevaspid          #+#    #+#             */
-/*   Updated: 2023/03/04 02:42:23 by gloms            ###   ########.fr       */
+/*   Updated: 2023/03/06 23:46:04 by gloms            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ static int	select_format(va_list args, const char *str, int i)
 		len += ft_printf_x(va_arg(args, unsigned int));
 	else if (str[i] == 'p')
 	{
-		len += ft_printf_p(va_arg(args, unsigned long int));
+		len += ft_printf_str("0x");
+		if (len >= 0)
+			len += ft_printf_p(va_arg(args, unsigned long int));
 	}
 	else if (str[i] == 'd' || str[i] == 'i')
 		len += ft_printf_diu(va_arg(args, int));
-	else
-		len += write(1, &(str[i]), 1);
 	return (len);
 }
 
